@@ -39,3 +39,21 @@ function createHeart() {
 
 // Criar corações a cada 500ms
 setInterval(createHeart, 500);
+
+document.getElementById("revealButton").addEventListener("click", function() {
+    document.getElementById("overlay").style.display = "none";
+    const content = document.getElementById("content");
+    content.style.display = "block";
+    setTimeout(() => content.style.opacity = "1", 100);
+});
+
+document.getElementById("playMusic").addEventListener("click", function() {
+    let music = document.getElementById("music");
+    if (music.paused) {
+        music.play();
+        this.innerText = "⏸️ Pausar Música";
+    } else {
+        music.pause();
+        this.innerText = "🎵 Tocar Música";
+    }
+});
