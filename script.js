@@ -57,3 +57,4 @@ document.getElementById("playMusic").addEventListener("click", function() {
         this.innerText = "🎵 Tocar Música";
     }
 });
+
