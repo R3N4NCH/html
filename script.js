@@ -16,45 +16,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById('contador-text').innerHTML = `${days} dias, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
     }
-
     setInterval(startCountdown, 1000);
+    
+    // Tocar música
+    document.getElementById("playMusic").addEventListener("click", function() {
+        let music = document.getElementById("music");
+        if (music.paused) {
+            music.play();
+            this.innerText = "⏸️ Pausar Música";
+        } else {
+            music.pause();
+            this.innerText = "🎵 Tocar Música";
+        }
+    });
 });
-// Função para criar corações caindo
-function createHeart() {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML = "❤️";
-
-    // Posicionamento aleatório
-    heart.style.left = Math.random() * window.innerWidth + "px";
-    heart.style.animationDuration = (Math.random() * 3 + 2) + "s"; // Entre 2s e 5s
-
-    document.body.appendChild(heart);
-
-    // Remover o coração após a animação
-    setTimeout(() => {
-        heart.remove();
-    }, 5000);
-}
-
-// Criar corações a cada 500ms
-setInterval(createHeart, 500);
-
-document.getElementById("revealButton").addEventListener("click", function() {
-    document.getElementById("overlay").style.display = "none";
-    const content = document.getElementById("content");
-    content.style.display = "block";
-    setTimeout(() => content.style.opacity = "1", 100);
-});
-
-document.getElementById("playMusic").addEventListener("click", function() {
-    let music = document.getElementById("music");
-    if (music.paused) {
-        music.play();
-        this.innerText = "⏸️ Pausar Música";
-    } else {
-        music.pause();
-        this.innerText = "🎵 Tocar Música";
-    }
-});
-
