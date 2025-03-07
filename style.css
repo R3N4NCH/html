@@ -86,3 +86,53 @@ body {
         transform: translateY(100vh);
     }
 }
+header h1 {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); }
+    to { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+}
+
+#revealButton {
+    background-color: #7B0000;
+    color: white;
+    padding: 15px 25px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+@keyframes float-hearts {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    50% { transform: translateY(-20px) scale(1.1); opacity: 0.8; }
+    100% { transform: translateY(-40px) scale(1.2); opacity: 0; }
+}
+
+.heart-float {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    opacity: 0.7;
+    animation: float-hearts 3s infinite;
+}
+body {
+    background: linear-gradient(-45deg, #11114e, #7B0000, #11114e);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
