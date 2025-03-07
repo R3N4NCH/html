@@ -19,7 +19,7 @@ body {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
+    background: #7b1c1c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,7 @@ body {
 
 .carousel-track {
     display: flex;
-    animation: slide 20s infinite linear;
+    animation: slide 10s infinite linear ;
 }
 
 .carousel img {
@@ -77,7 +77,7 @@ body {
     75% { transform: translateX(-75%); }
     85% { transform: translateX(-85%); }
     95% { transform: translateX(-95%); }
-    105% { transform: translateX(0%); }
+    105% { transform: translateX(10%); }
 }
 
 .heart {

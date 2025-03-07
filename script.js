@@ -23,15 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
         let music = document.getElementById("music");
         if (music.paused) {
             music.play();
-            this.innerText = "⏸️ Pausar Música";
+            this.innerText = "⏸Pausar Música";
         } else {
             music.pause();
-            this.innerText = "🎵 Tocar Música";
+            this.innerText = "Tocar Música";
         }
     });
 });
 
-// Função para criar corações caindo
+// Função corações caindo
 function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
