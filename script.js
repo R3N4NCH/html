@@ -48,3 +48,18 @@ function createHeart() {
 }
 
 setInterval(createHeart, 500);
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector(".carousel-track");
+    const images = document.querySelectorAll(".carousel-track img");
+    let index = 0;
+
+    function moveSlide() {
+        index++;
+        if (index >= images.length) {
+            index = 0; 
+        }
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(moveSlide, 3000); // Troca de imagem a cada 3 segundos
+});

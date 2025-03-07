@@ -49,35 +49,24 @@ body {
 
 /* Estilo do Carrossel */
 .carousel {
-    width: 100%;
+    width: 90%;
+    max-width: 300px;
     overflow: hidden;
     position: relative;
-    max-width: 400px;
     margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-track {
     display: flex;
-    animation: slide 10s infinite linear
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel img {
     width: 100%;
+    flex: 0 0 100%;
     border-radius: 10px;
-}
-
-@keyframes slide {
-    0% { transform: translateX(0%); }
-    15% { transform: translateX(-15%); }
-    25% { transform: translateX(-25%); }
-    35% { transform: translateX(-35%); }
-    45% { transform: translateX(-45%); }
-    55% { transform: translateX(-55%); }
-    65% { transform: translateX(-65%); }
-    75% { transform: translateX(-75%); }
-    85% { transform: translateX(-85%); }
-    95% { transform: translateX(-95%); }
-    105% { transform: translateX(100%); }
 }
 
 .heart {
