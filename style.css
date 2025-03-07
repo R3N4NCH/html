@@ -139,3 +139,39 @@ body {
 * {
     font-family: "Times New Roman", serif;
 }
+
+.feedback {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    opacity: 0.9;
+}
+
+.feedback-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+#yesButton {
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#noButton {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    transition: top 0.2s ease-in-out, left 0.2s ease-in-out;
+}

@@ -63,3 +63,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(moveSlide, 3000); // Troca de imagem a cada 3 segundos
 });
+
+document.getElementById("revealButton").addEventListener("click", function() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("content").style.display = "block";
+
+    // Exibir a seção do feedback apenas depois de abrir o site
+    setTimeout(() => {
+        document.getElementById("feedbackSection").style.display = "block";
+    }, 2000);
+});
+
+document.getElementById("yesButton").addEventListener("click", function() {
+    alert("Fico muito feliz que tenha gostado! 😍💖");
+});
+
+document.getElementById("noButton").addEventListener("mouseover", function() {
+    let maxWidth = window.innerWidth - this.clientWidth - 20;
+    let maxHeight = window.innerHeight - this.clientHeight - 20;
+
+    let newX = Math.random() * maxWidth;
+    let newY = Math.random() * maxHeight;
+
+    this.style.left = `${newX}px`;
+    this.style.top = `${newY}px`;
+});
