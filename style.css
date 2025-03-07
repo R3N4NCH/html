@@ -58,7 +58,7 @@ body {
 
 .carousel-track {
     display: flex;
-    animation: slide 10s infinite linear ;
+    animation: slide 10s infinite linear
 }
 
 .carousel img {
@@ -77,7 +77,7 @@ body {
     75% { transform: translateX(-75%); }
     85% { transform: translateX(-85%); }
     95% { transform: translateX(-95%); }
-    105% { transform: translateX(10%); }
+    105% { transform: translateX(100%); }
 }
 
 .heart {
